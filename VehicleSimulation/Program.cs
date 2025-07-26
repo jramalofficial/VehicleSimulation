@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.CompilerServices;
+using VehicleSimulation.Vehicles;
 
 namespace VehicleSimulation
 {
@@ -7,8 +8,18 @@ namespace VehicleSimulation
     {
         static void Main(string[] args)
         {
-           PlayGround playGround = new PlayGround();
-            playGround.StartGame();
+            var service = new ServiceCollection();
+
+            service.AddTransient<Car>();
+            service.AddTransient<Bus>();
+            service.AddTransient<Bike>();
+            service.AddTransient<PlayGround>();
+
+            var serviceProvider = service.BuildServiceProvider();
+
+           
+            var game = serviceProvider.GetRequiredService<PlayGround>();
+            game.StartGame();
         }
     }
 }
