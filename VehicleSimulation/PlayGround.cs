@@ -25,7 +25,9 @@ namespace VehicleSimulation
             {
                 { "c", () => _provider.GetRequiredService<Car>() },
                 { "b", () => _provider.GetRequiredService<Bike>() },
-                { "u", () => _provider.GetRequiredService<Bus>() }
+                { "u", () => _provider.GetRequiredService<Bus>() },
+                { "y", () => _provider.GetRequiredService<Cycle>() }
+
             };
             Dictionary<string, string> keyBindings = new()
             {
@@ -33,7 +35,7 @@ namespace VehicleSimulation
                 {"uparrow","move"},
                 {"t","throw"}
             };
-            IVehicle currentVehicle = null;
+            IVehicle? currentVehicle = null;
 
             Console.WriteLine("Enter the Name of the Player");
             string name = Console.ReadLine();

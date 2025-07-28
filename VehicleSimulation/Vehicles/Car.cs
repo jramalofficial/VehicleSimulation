@@ -9,18 +9,18 @@ namespace VehicleSimulation.Vehicles
 {
     public class Car:IVehicle
     {
-        public string Name { get; } = "Car";
+        public string Name { get; } = "ECar";
         public string Move()
         {
-            return "Car Driving";
+            return $"{Name} Driving";
         }
         public string GetIn()
         {
-            return "Getting in the Car";
+            return $"Getting on the {Name}";
         }
         public string GetOff()
         {
-            return "Getting off the Car";
+            return $"Getting off the {Name}";
         }
     }
 }

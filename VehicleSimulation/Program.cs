@@ -13,6 +13,7 @@ namespace VehicleSimulation
             service.AddTransient<Car>();
             service.AddTransient<Bus>();
             service.AddTransient<Bike>();
+            service.AddTransient<Cycle>();
             service.AddTransient<PlayGround>();
 
             var serviceProvider = service.BuildServiceProvider();

@@ -7,12 +7,12 @@ using VehicleSimulation.Inerfaces;
 
 namespace VehicleSimulation.Vehicles
 {
-    public class Bus:IVehicle
+    public class Cycle: IVehicle
     {
-        public string Name { get; } = "bus";
+        public string Name { get; } = "Cycle";
         public string Move()
         {
-            return $"{Name} Driving";
+            return $"{Name} Riding";
         }
         public string GetIn()
         {

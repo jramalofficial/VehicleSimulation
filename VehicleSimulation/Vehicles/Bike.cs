@@ -10,19 +10,19 @@ namespace VehicleSimulation.Vehicles
     public class Bike : IVehicle
     {
         public string Name { get; } = "Bike";
-
+        public string Move()
+        {
+            return $"{Name} Riding";
+        }
         public string GetIn()
         {
-            return "Getting on the Bike";
+            return $"Getting on the {Name}";
         }
         public string GetOff()
         {
-            return "Getting off the Bike";
+            return $"Getting off the {Name}";
         }
-        public string Move()
-        {
-            return "Bike Riding";
-        }
+        
         
     }
 }
